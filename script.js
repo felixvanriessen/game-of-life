@@ -1,13 +1,13 @@
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
 
-let cw = 1200
-let ch = 800
+let cw = 360
+let ch = 600
 
 canvas.width = cw
 canvas.height = ch
 
-let gridxy = 20
+let gridxy = 15
 let gridx = cw / gridxy
 let gridy = ch / gridxy
 
@@ -59,11 +59,11 @@ function unknown(grid) {
            let count = countAround(grid, x, y)
            if (cell){
                //if a live cell has 2 or 3 neighbours
-               if (count < 2 || count > 3) return false
+               if (count < rule1 || count > rule2) return false
                else return true
            } else {
                //if a dead cell has 3 neighbours
-               if (count === 3){
+               if (count == rule3){
                    return true
                } else return false
            }
@@ -73,11 +73,11 @@ function unknown(grid) {
    return nextGrid
 }
 
+let rule1 = 2
+let rule2 = 3
+let rule3 = 3
+
 let lifeGrid = makeGrid()
-
-
 drawGrid(lifeGrid)
-setInterval(() => {
-   lifeGrid = unknown(lifeGrid)
-   drawGrid(lifeGrid)
-}, 300);
+
+

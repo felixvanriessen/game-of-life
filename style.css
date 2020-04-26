@@ -1,20 +1,86 @@
 * {
    padding:0;
    margin:0;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
    background-color: rgb(245, 245, 245);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
 }
+
 
 .canvas-container {
    display: flex;
    align-items: center;
    justify-content: center;
+   margin-top: 10px;
 }
 
 canvas {
-   margin:20px;
    box-shadow:0px 0px 10px rgb(150,150,150);
    background-color: white;
+   border: 2px solid black;
+}
+
+.controls {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   height: 50vh;
+   width: 100%;
+   
+}
+.btns {
+   width: 100%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.btns button {
+   height: 26px;
+   width: 100px;
+   background-color: white;
+   border-radius: 8px;
+   border:2px solid black;
+   font-size:1.2rem;
+}
+
+
+.speed-div {
+   width: 90%;
+   height: 30px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   font-size: 1.2rem;
+   background-color: white;
+   border: 2px solid lightslategrey;
+   border-radius: 6px;
+}
+
+.rule-div {
+   height: 160px;
+   width: 90%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+
+   background-color: white;
+   border: 2px solid lightslategrey;
+   border-radius: 6px;
+}
+
+.rule-div input {
+   height: 20px;
+   text-align:center;
+   border-radius: 5px;
+   border: 1px solid grey;
 }

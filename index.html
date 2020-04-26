@@ -10,12 +10,30 @@
    <div class="canvas-container">
       <canvas></canvas>
    </div>
+
    <div class="controls">
-      <button id='play-btn'>PLAY</button>
+      <div class="btns">
+         <button id='play-btn'>PLAY</button>
+         <button id='clear-btn'>CLEAR</button>
+      </div>
+
+      <div class="speed-div">
+         <label for="game-speed">Speed</label>
+         <input type="range" name="game-speed" id="game-speed" min='1' max='10' value='5' step='1'>
+      </div>
+      <div class='rule-div'>
+         <h4>Rules: </h4>
+         <label for="rule1">Minimum Neighbours needed to stay alive:</label>
+         <input id='rule1' name='rule1' type="number" min='0' max='5' value='2'>
+         <label for="rule1">Maximum Neighbours needed to stay alive:</label>
+         <input id='rule2' name='rule2' type="number" min='1' max='6' value='3'>
+         <label for="rule1">Neighbours needed to reproduce:</label>
+         <input id='rule3' name='rule3' type="number" min='1' max='6' value='3'>
+      </div>
    </div>
-   <div class="description">
-      <p>Description goes here</p>
-   </div>
+
+   <script src="script0.js"></script>
    <script src="script.js"></script>
+   <script src="events.js"></script>
 </body>
 </html>
