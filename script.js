@@ -3,11 +3,24 @@ const ctx = canvas.getContext('2d')
 
 let cw = 360
 let ch = 600
+let gridxy = 15
+if (screen.width < 450){
+   cw = 360
+   ch = 600
+   gridxy = 15
+} else {
+   cw = 1200
+   ch = 800
+   gridxy = 20
+}
+
+
+
 
 canvas.width = cw
 canvas.height = ch
 
-let gridxy = 15
+
 let gridx = cw / gridxy
 let gridy = ch / gridxy
 

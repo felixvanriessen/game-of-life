@@ -37,15 +37,21 @@ $clearbtn.addEventListener('click', ()=>{
    drawGrid(lifeGrid)
 })
 
-
-function animation(){
+function utilities(){
    gamespeed = $gamespeed.value
    rule1 = $rule1.value
    rule2 = $rule2.value
    rule3 = $rule3.value
    
-   delaycounter++
    
+
+}
+
+
+function animation(){
+   utilities()
+   
+   delaycounter++
    if (delaycounter > (30 / gamespeed)){
       if (play) {
          lifeGrid = unknown(lifeGrid)
